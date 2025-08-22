@@ -1,0 +1,61 @@
+{
+  "name": "小红书自动化搜索与互动工具",
+  "version": "1.0.0",
+  "description": "一个功能强大的小红书自动化工具，支持关键词搜索、自动点赞、多账户轮流登录和智能回复功能",
+  "main": "xhs_find_and_open.py",
+  "scripts": {
+    "start": "python start.py",
+    "search": "python xhs_find_and_open.py",
+    "test": "python test_reply.py",
+    "verify": "python verify_integration.py"
+  },
+  "keywords": [
+    "小红书",
+    "自动化",
+    "搜索",
+    "点赞",
+    "评论",
+    "多账户",
+    "爬虫"
+  ],
+  "author": "Claude",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "config": {
+    "default_settings": {
+      "max_refresh": 30,
+      "scroll_steps": 6,
+      "refresh_interval": 3.0,
+      "login_timeout": 180,
+      "account_switch_interval": 10
+    },
+    "file_paths": {
+      "auth_state": "auth_state.json",
+      "reply_content": "reply_content.txt",
+      "keywords": "keywords.txt",
+      "account_usage": "account_usage.json",
+      "accounts_dir": "accounts"
+    },
+    "features": {
+      "search": true,
+      "auto_like": true,
+      "auto_reply": true,
+      "multi_account": true,
+      "headless": true,
+      "proxy": true,
+      "debug": true
+    }
+  },
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+  ],
+  "python_version": ">=3.7",
+  "last_updated": "2024-01-XX",
+  "changelog": [
+    "v1.0.0: 初始版本，包含基础搜索、自动点赞、多账户支持和自动回复功能"
+  ]
+}
